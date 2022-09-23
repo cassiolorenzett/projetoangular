@@ -1,6 +1,6 @@
 # Projeto angular
 
-Para executar o projeto:
+Para executar o projeto:<br>
 1- Clonar o mesmo do git
 2- Rodar o comnando npm i para baixar as dependencias
 3- rodar o projeto via npm start
