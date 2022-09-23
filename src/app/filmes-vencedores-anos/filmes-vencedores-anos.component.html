@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header">
+      <h5 class="card-title m-0"><b>List movie winners by year</b></h5>
+    </div>
+    <div class="card-body">
+        <p-inputNumber [showButtons]="true"  [(ngModel)]="ano" [min]="2000" [max]="2099"></p-inputNumber>
+        <button style='margin-left: 10px;' pButton icon="pi pi-search" (click)="getFilmes()"></button>
+        <hr>
+
+        <p-table [value]="filmes" [scrollable]="true" [loading]="loadingTable">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Id</th>
+                    <th>Year</th>
+                    <th>Title</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-filme>
+                <tr>
+                    <td>{{filme.id}}</td>
+                    <td>{{filme.year}}</td>            
+                    <td>{{filme.title}}</td>            
+                </tr>
+            </ng-template>
+        </p-table>
+
+    </div>
+  </div>

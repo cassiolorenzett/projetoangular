@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-header">
+      <h5 class="card-title m-0"><b>Top 3 studios with winners</b></h5>
+    </div>
+    <div class="card-body">
+        <p-table [value]="estudios" [scrollable]="true" [loading]="loadingTable">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Year</th>
+                    <th>Win Count</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-estudio>
+                <tr>
+                    <td>{{estudio.name}}</td>
+                    <td>{{estudio.winCount}}</td>            
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+  </div>

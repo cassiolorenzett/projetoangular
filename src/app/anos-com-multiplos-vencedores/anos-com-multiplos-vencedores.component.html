@@ -1,0 +1,23 @@
+
+<div class="card">
+    <div class="card-header">
+      <h5 class="card-title m-0"><b>List yers with multiple winners</b></h5>
+    </div>
+    <div class="card-body">
+        <p-table [value]="anos" [scrollable]="true" [loading]="loadingTable">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Year</th>
+                    <th>Win Count</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-ano>
+                <tr>
+                    <td>{{ano.year}}</td>
+                    <td>{{ano.winnerCount}}</td>            
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+  </div>
+

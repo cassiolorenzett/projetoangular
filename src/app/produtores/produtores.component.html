@@ -1,0 +1,50 @@
+<div class="card">
+    <div class="card-header">
+      <h5 class="card-title m-0"><b>Producers with longest and shortest interval between wins</b></h5>
+    </div>
+    <div class="card-body">
+        <div>
+            <b>Maximum</b>
+            <p-table [value]="produtores_max" [scrollable]="true" [loading]="loadingTable">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Producer</th>
+                        <th>Interval</th>
+                        <th>Previous Year</th>
+                        <th>Following Year</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-produtor_max>
+                    <tr>
+                        <td>{{produtor_max.producer}}</td>
+                        <td>{{produtor_max.interval}}</td>            
+                        <td>{{produtor_max.previousWin}}</td>            
+                        <td>{{produtor_max.followingWin}}</td>            
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        <hr>
+        <div>
+            <b>Minimum</b>
+            <p-table [value]="produtores_min" [scrollable]="true" [loading]="loadingTable">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Producer</th>
+                        <th>Interval</th>
+                        <th>Previous Year</th>
+                        <th>Following Year</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-produtor_min>
+                    <tr>
+                        <td>{{produtor_min.producer}}</td>
+                        <td>{{produtor_min.interval}}</td>            
+                        <td>{{produtor_min.previousWin}}</td>            
+                        <td>{{produtor_min.followingWin}}</td>            
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+  </div>
