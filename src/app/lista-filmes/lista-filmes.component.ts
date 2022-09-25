@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FilmesService } from '../filmes.service';
+import { FilmesService } from '../services/filmes.service';
 import { FilmesModel } from './filmes.model';
 
 @Component({
@@ -17,7 +17,7 @@ export class ListaFilmesComponent implements OnInit {
   ngOnInit(): void {
     this.loadingTable = true;
     this.filmesServices.getAllFilmes()
-                        .subscribe((resp:any)=>{
+                        .subscribe((resp:FilmesModel[])=>{
                           this.filmes = resp
                         },(error)=>{
                           console.error(error)

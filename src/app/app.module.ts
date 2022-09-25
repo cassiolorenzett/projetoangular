@@ -8,16 +8,17 @@ import { ButtonModule } from 'primeng/button';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AnosComMultiplosVencedoresComponent } from './anos-com-multiplos-vencedores/anos-com-multiplos-vencedores.component';
+import { AnosComMultiplosVencedoresComponent } from './dashboard/anos-com-multiplos-vencedores/anos-com-multiplos-vencedores.component';
 import {TableModule} from 'primeng/table';
-import { EstudiosVitoriasComponent } from './estudios-vitorias/estudios-vitorias.component';
-import { ProdutoresComponent } from './produtores/produtores.component';
-import { FilmesVencedoresAnosComponent } from './filmes-vencedores-anos/filmes-vencedores-anos.component';
+import { EstudiosVitoriasComponent } from './dashboard/estudios-vitorias/estudios-vitorias.component';
+import { ProdutoresComponent } from './dashboard/produtores/produtores.component';
+import { FilmesVencedoresAnosComponent } from './dashboard/filmes-vencedores-anos/filmes-vencedores-anos.component';
 import { FormsModule } from '@angular/forms';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { ListaFilmesComponent } from './lista-filmes/lista-filmes.component';
 import {DropdownModule} from 'primeng/dropdown';
 import {InputTextModule} from 'primeng/inputtext';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,9 @@ import {InputTextModule} from 'primeng/inputtext';
     DropdownModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FilmesService } from '../filmes.service';
+import { FilmesService } from '../../services/filmes.service';
 import { ProdutoresModel } from './produtores.model';
 
 @Component({
@@ -16,16 +16,16 @@ export class ProdutoresComponent implements OnInit {
   constructor(private filmesServices:FilmesService) { }
 
   ngOnInit(): void {
-    this.loadingTable = true;
+    this.loadingTable = true
     this.filmesServices.getProdutores()
                         .subscribe((resp:any)=>{
                           this.produtores_max = resp.max
                           this.produtores_min = resp.min
-                          this.loadingTable = false;
                         },(error)=>{
-                          this.loadingTable = false;
                           console.error(error)
                           alert('ERRO AO CARREGAR OS ESTUDIOS COM MAIS VITORIAS')
+                        },()=>{
+                          this.loadingTable = false
                         })
   }
 
