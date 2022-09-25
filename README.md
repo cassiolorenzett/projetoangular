@@ -1,13 +1,13 @@
 # Projeto angular
 
-Para executar o projeto:
-1- Clonar o mesmo do git
-2- Rodar o comnando npm i para baixar as dependencias
-3- rodar o projeto via npm start
+Para executar o projeto:<br>
+1- Clonar o mesmo do git<br>
+2- Rodar o comnando npm i para baixar as dependencias<br>
+3- rodar o projeto via npm start<br>
 
-Dependencias do projeto
-1- Template Admin LTE
-2- Template de componente PrimeFaces e primeicons
+Dependencias do projeto<br>
+1- Template Admin LTE<br>
+2- Template de componente PrimeFaces e primeicons<br>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
