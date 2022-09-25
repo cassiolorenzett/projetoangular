@@ -2,7 +2,7 @@
 
 Para executar o projeto:<br>
 1- Clonar o mesmo do git<br>
-2- Rodar o comnando npm i para baixar as dependencias<br>
+2- Rodar o comando npm i para baixar as dependências<br>
 3- rodar o projeto via npm start<br>
 
 Dependencias do projeto<br>
